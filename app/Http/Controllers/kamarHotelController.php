@@ -33,5 +33,6 @@ class kamarHotelController extends Controller
         $data['success'] = true;
         $data['result'] = $datakmrHotel;
         return response()->json($data, Response::HTTP_OK);
+        
     }
 }
