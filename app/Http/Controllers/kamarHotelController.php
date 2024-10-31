@@ -27,11 +27,10 @@ class kamarHotelController extends Controller
         }
     }
 
-    public function show(DataKamarHotel $datakmrHotel)
+    public function show()
     {
-        $datakmrHotel = DataKamarHotel::find($datakmrHotel);
+        $datakmrHotel = DataKamarHotel::all();
         $data['success'] = true;
-        $data['message'] = "Data Kamar Hotel";
         $data['result'] = $datakmrHotel;
         return response()->json($data, Response::HTTP_OK);
     }
